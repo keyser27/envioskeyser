@@ -1,0 +1,15 @@
+; Los archivos BIND son archivos .TXT utilizados para exportar
+; registros de DNS entre dominios. 
+; Los registradores de dominios suelen usar los archivos BIND
+;, así que son la opción ideal si
+; quieres exportar registros de recursos a un dominio
+; gestionado por otro registrador.
+
+envioskeyser.com. 3600 IN MX 1 aspmx.l.google.com.
+envioskeyser.com. 3600 IN MX 5 alt1.aspmx.l.google.com.
+envioskeyser.com. 3600 IN MX 5 alt2.aspmx.l.google.com.
+envioskeyser.com. 3600 IN MX 10 alt3.aspmx.l.google.com.
+envioskeyser.com. 3600 IN MX 10 alt4.aspmx.l.google.com.
+envioskeyser.com. 3600 IN SPF "v=spf1 include:_spf.google.com ~all"
+envioskeyser.com. 3600 IN TXT "v=spf1 include:_spf.google.com ~all"
+google._domainkey.envioskeyser.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgzx+LD5a3mO0A304Tu8ENrAA2RF6AWKZ/XeWGdUOAvzvGCtHDi+0l7aPtmy+B66M51CHdHQycdckWsUFchvzDhkZzXzQlRmIHHq5ec7MdkoqFTiXb+w2wKq+kbtHPwfau5gFPpAmzPyeZ16ZSJmjNMS9qewIDV47notajaEyt4yjMPXHVkkvIcqdvG7PPTBD8" "ll+SfuKJ79BmGN8lEuofGMkKgFxqbuxb2/gJX2sK7uoXWQI25st15hwxlp1gNqToWuXwE6cj/rry2f+HCg8kB/trWAmHhYu4YaHb5bI1/mT0ePMYJexBrBDtGwNOlvnIgkiqgLcO8+L5KjSjidpowIDAQAB"
